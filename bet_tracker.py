@@ -1,3 +1,4 @@
+# Re-deploy after secrets fix
 import streamlit as st
 import requests
 import pandas as pd
@@ -129,4 +130,5 @@ else:  # Soccer
 
 
 st.warning("This is a basic tool using public APIs. For real bets, use FanDuel app. Gambling responsibly—set limits.")
+
 
