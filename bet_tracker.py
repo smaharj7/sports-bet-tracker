@@ -4,9 +4,10 @@ import pandas as pd
 from datetime import datetime, timedelta
 
 # Replace with your API keys
-NBA_STATS_API_KEY = "YOUR_BALLDONTLIE_API_KEY"
-SOCCER_STATS_API_KEY = "YOUR_API_FOOTBALL_KEY"
-ODDS_API_KEY = "YOUR_THE_ODDS_API_KEY"
+import streamlit as st
+NBA_STATS_API_KEY = st.secrets["NBA_STATS_API_KEY"]
+SOCCER_STATS_API_KEY = st.secrets["SOCCER_STATS_API_KEY"]
+ODDS_API_KEY = st.secrets["ODDS_API_KEY"]
 
 
 # Helper functions
@@ -126,5 +127,6 @@ else:  # Soccer
     suggestion = suggest_bet(odds, past_df, "Your Team")
     st.subheader("Bet Suggestion")
     st.write(suggestion)
+
 
 st.warning("This is a basic tool using public APIs. For real bets, use FanDuel app. Gambling responsibly—set limits.")
